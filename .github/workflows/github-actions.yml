@@ -35,5 +35,5 @@ jobs:
         ECR_REPOSITORY: hello-world-python2
         IMAGE_TAG: latest
       run: |
-        docker build -t 629388610155.dkr.ecr.us-east-1.amazonaws.com/hello-world-python2/hello-world-python2:latest
+        docker build -t 629388610155.dkr.ecr.us-east-1.amazonaws.com/hello-world-python2/hello-world-python2:latest .
         docker push 629388610155.dkr.ecr.us-east-1.amazonaws.com/hello-world-python2/hello-world-python2:latest
