@@ -31,8 +31,8 @@ jobs:
 
     - name: Build, tag, and push image to Amazon ECR
       env:
-        ECR_REGISTRY: 629388610155.dkr.ecr.us-east-1.amazonaws.com/hello-world-python
-        ECR_REPOSITORY: hello-world-python
+        ECR_REGISTRY: 629388610155.dkr.ecr.us-east-1.amazonaws.com/hello-world-python2
+        ECR_REPOSITORY: hello-world-python2
         IMAGE_TAG: latest
       run: |
         docker build -t 629388610155.dkr.ecr.us-east-1.amazonaws.com/hello-world-python/hello-world-python:latest .
