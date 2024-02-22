@@ -38,8 +38,8 @@ jobs:
         ECR_REPOSITORY: hello-world-python2
         IMAGE_TAG: latest
       run: |
-        docker build . -t 629388610155.dkr.ecr.us-east-1.amazonaws.com/hello-world-python2/hello-world-python2:latest
-        docker push 629388610155.dkr.ecr.us-east-1.amazonaws.com/hello-world-python2/hello-world-python2:latest
-        echo "IMAGE latest is pushed to 629388610155.dkr.ecr.us-east-1.amazonaws.com/hello-world-python2/hello-world-python2
-          echo "image_tag=latest 
-          echo "629388610155.dkr.ecr.us-east-1.amazonaws.com/hello-world-python2/hello-world-python2:latest"
+        docker build . -t "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+        docker push "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+        echo "IMAGE $IMAGE_TAG is pushed to $ECR_REGISTRY/$ECR_REPOSITORY"
+        echo "image_tag=$IMAGE_TAG" 
+        echo "full_image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
